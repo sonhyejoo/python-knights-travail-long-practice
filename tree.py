@@ -19,14 +19,12 @@ class Node():
         if self._parent is not None and not node._children:
             return
 
-
     def remove_child(self, node):
         if node in self._children:
             self._children.remove(node)
             node.parent = None
         if not node._children:
             return
-
 
     @property
     def parent(self):
@@ -61,7 +59,6 @@ class Node():
         #     if node.value == value:
         #         return node
         #     s = node.children + s
-
 
     def breadth_search(self, value):
         s = list()
